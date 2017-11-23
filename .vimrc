@@ -14,10 +14,15 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Bundle 'scrooloose/syntastic'
 
 " YouCompleteMe autocompleter
 Plugin 'https://github.com/Valloric/YouCompleteMe.git'
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_python_checkers=['flake8', 'python3']
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
